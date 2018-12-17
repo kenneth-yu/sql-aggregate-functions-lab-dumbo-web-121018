@@ -2,12 +2,12 @@
 
 def highest_student_gpa
   sql = "SELECT MAX(gpa) FROM students"
-  "SELECT name FROM students WHERE gpa = #{db.execute(sql)[0][0]}"
+  "SELECT name FROM students WHERE gpa = #{@db.execute(sql)[0][0]}"
 end
 
 def lowest_student_gpa
     sql = "SELECT MIN(gpa) FROM students"
-  "SELECT name FROM students WHERE gpa = #{db.execute(sql)[0][0]}"
+  "SELECT name FROM students WHERE gpa = #{@db.execute(sql)[0][0]}"
 end
 
 def average_student_gpa
